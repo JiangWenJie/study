@@ -1,10 +1,22 @@
 package com.jwj.study.activiti;
 
-import org.activiti.engine.ProcessEngine;
-import org.activiti.engine.ProcessEngineConfiguration;
-import org.activiti.engine.RepositoryService;
+import org.activiti.engine.*;
+import org.activiti.engine.form.FormData;
+import org.activiti.engine.form.FormProperty;
+import org.activiti.engine.history.HistoricActivityInstance;
 import org.activiti.engine.impl.cfg.StandaloneProcessEngineConfiguration;
+import org.activiti.engine.impl.form.DateFormType;
+import org.activiti.engine.impl.form.LongFormType;
+import org.activiti.engine.impl.form.StringFormType;
 import org.activiti.engine.repository.Deployment;
+import org.activiti.engine.repository.ProcessDefinition;
+import org.activiti.engine.runtime.ProcessInstance;
+import org.activiti.engine.task.Task;
+
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 /**
  * @ClassName ActivitiDemo
@@ -14,9 +26,9 @@ import org.activiti.engine.repository.Deployment;
  * @Version 1.0
  */
 public class ActivitiDemo {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
         ActivitiDemo activitiDemo=new ActivitiDemo();
-        //创建一个流程引擎的配置信息
+        //创建一个流程引擎的配置信息1
         ProcessEngineConfiguration cfg=activitiDemo.buildProcessEngineConfiguration();
 
         // 创建流程引擎后会生成数据库schema，并在表act_ge_property插入数据，该表以key-value的形式存储数据，内容如下
@@ -29,6 +41,9 @@ public class ActivitiDemo {
 
         //获取仓储服务
         RepositoryService repositoryService=processEngine.getRepositoryService();
+        // 在act_ge_bytearray 插入xml文件
+        // 在act_re_deployment 插入部署信息
+        // 在act_re_procdef插入流程的定义
         Deployment deployment=repositoryService.createDeployment().addClasspathResource("onboarding.bpmn20.xml").deploy();
 
     }
