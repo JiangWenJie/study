@@ -12,7 +12,6 @@
     <modules>
         <module>activiti</module>
         <module>netty</module>
-        <module>csapp</module>
         <module>java-8-lambdas</module>
     </modules>
     <dependencies>
