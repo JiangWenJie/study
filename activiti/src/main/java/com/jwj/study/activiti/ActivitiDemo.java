@@ -54,7 +54,7 @@ public class ActivitiDemo {
                 .setJdbcUrl("jdbc:mysql://localhost:3306/activiti?useSSL=false&serverTimezone=UTC")
                 .setJdbcUsername("root")
                 .setJdbcPassword("123456")
-                .setJdbcDriver("com.mysql.cj.jdbc.Driver")
+                .setJdbcDriver("com.mysql.jdbc.Driver")
                 // 这里需要注意，此处值有三种,schema是指数据库的组织和结构，包括表、关系、视图和存储过程等。
                 // false:在创建流程引擎（ProcessEngine）时，对照库检查数据库schema的版本，如果版本不匹配，则引发异常。
                 // true:在构建流程引擎（ProcessEngine）时，将执行检查并在必要时执行schema的更新。如果该schema不存在，则会创建它。

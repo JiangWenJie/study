@@ -13,6 +13,9 @@
         <module>activiti</module>
         <module>netty</module>
         <module>java-8-lambdas</module>
+        <module>algorithms</module>
+        <module>poi</module>
+        <module>jvm</module>
     </modules>
     <dependencies>
         <dependency>
