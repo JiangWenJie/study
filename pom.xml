@@ -16,6 +16,7 @@
         <module>algorithms</module>
         <module>poi</module>
         <module>jvm</module>
+        <module>guava</module>
     </modules>
     <dependencies>
         <dependency>
