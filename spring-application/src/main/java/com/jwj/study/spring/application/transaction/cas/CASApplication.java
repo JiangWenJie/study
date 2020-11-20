@@ -1,8 +1,10 @@
 package com.jwj.study.spring.application.transaction.cas;
 
 import javafx.application.Application;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
  * @author jwj
@@ -11,9 +13,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @since 1.0
  */
 @SpringBootApplication
+@EnableTransactionManagement
+@MapperScan("com.jwj.study.spring.application.transaction.cas")
 public class CASApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(CASApplication.class, args);
     }
 }

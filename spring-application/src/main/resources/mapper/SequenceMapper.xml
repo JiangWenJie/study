@@ -8,6 +8,20 @@
   </resultMap>
 
   <sql id="Base_Column_List">
-    id, current_time, current_value
+    id, `current_time`, current_value
   </sql>
+  <insert id="initNew">
+    insert into sequence (`current_time`, current_value) values (#{currentTime},1)
+  </insert>
+  <update id="compareAndSet">
+    update sequence set current_value=#{newValue} where `current_time`=#{currentTime} and current_value=#{oldValue}
+  </update>
+  <select id="selectCurrentValueByTime" resultType="java.lang.Integer">
+    select
+    current_value
+    from sequence where `current_time`=#{currentTime}
+    <if test="isLock">
+      FOR UPDATE
+    </if>
+  </select>
 </mapper>
