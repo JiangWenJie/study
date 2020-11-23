@@ -17,9 +17,6 @@ public class SequenceServiceTest extends BaseTest {
 
     private final int THREAD_SIZE=1000;
 
-//    @Autowired
-//    ExecutorService executorService;
-
     @Test
     public void test() throws InterruptedException {
         long startTime=System.currentTimeMillis();
@@ -32,7 +29,7 @@ public class SequenceServiceTest extends BaseTest {
         calendar.set(Calendar.SECOND, 0);
         calendar.set(Calendar.MILLISECOND, 0);
         final Date currentDate=calendar.getTime();
-        ExecutorService executor= Executors.newSingleThreadExecutor();
+        ExecutorService executor= Executors.newFixedThreadPool(50);
 
         for (int i = 0; i < THREAD_SIZE; i++) {
             executor.execute(() -> {

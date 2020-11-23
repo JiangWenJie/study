@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.support.TransactionTemplate;
 
-import java.time.LocalDate;
 import java.util.Date;
 
 /**
@@ -43,7 +42,7 @@ public class SequenceService {
                 oldValue = sequenceMapper.selectCurrentValueByTime(date,false);
                 newValue = oldValue + INCR_VALUE;
             }
-            throw new Exception();
+            return newValue;
         }
     }
 //    注意这里的Transactional可能会失效
