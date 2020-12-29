@@ -15,10 +15,15 @@ public class SequenceServiceTest extends BaseTest {
     @Autowired
     SequenceService sequenceService;
 
-    private final int THREAD_SIZE=1000;
+    private final int THREAD_SIZE=200;
+
+    public static void main(String[] args) {
+        System.out.println("0".equals(0));
+    }
 
     @Test
     public void test() throws InterruptedException {
+
         long startTime=System.currentTimeMillis();
         CountDownLatch countDownLatch=new CountDownLatch(THREAD_SIZE);
         Date date=new Date();
@@ -29,12 +34,12 @@ public class SequenceServiceTest extends BaseTest {
         calendar.set(Calendar.SECOND, 0);
         calendar.set(Calendar.MILLISECOND, 0);
         final Date currentDate=calendar.getTime();
-        ExecutorService executor= Executors.newFixedThreadPool(50);
+        ExecutorService executor= Executors.newFixedThreadPool(100);
 
         for (int i = 0; i < THREAD_SIZE; i++) {
             executor.execute(() -> {
                 try {
-                    sequenceService.compareAndSet(currentDate);
+                    sequenceService.init(date);
                 } catch (Exception e) {
                     countDownLatch.countDown();
                     e.printStackTrace();
