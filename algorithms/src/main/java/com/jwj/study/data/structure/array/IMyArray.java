@@ -1,4 +1,4 @@
-package com.jwj.study.data.structure;
+package com.jwj.study.data.structure.array;
 
 /**
  * @author jwj

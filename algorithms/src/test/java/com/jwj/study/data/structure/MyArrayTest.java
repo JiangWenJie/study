@@ -1,11 +1,8 @@
 package com.jwj.study.data.structure;
 
+import com.jwj.study.data.structure.array.MyArray;
 import org.junit.Before;
 import org.junit.Test;
-
-import java.util.Arrays;
-
-import static org.junit.Assert.*;
 
 public class MyArrayTest {
     private MyArray myArray;
