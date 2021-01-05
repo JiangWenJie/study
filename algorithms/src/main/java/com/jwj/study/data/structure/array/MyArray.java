@@ -13,6 +13,14 @@ public class MyArray implements IMyArray {
     private int[] array;
     private int size;
 
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
+
     public MyArray(int capacity) {
         array = new int[capacity];
         size = 0;
