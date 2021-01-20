@@ -8,5 +8,5 @@ package com.jwj.study.data.structure.hash;
  */
 public interface IMyHashMap {
     void put(String key,String value);
-    int get(String key);
+    String get(String key);
 }
