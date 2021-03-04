@@ -18,6 +18,7 @@
         <module>guava</module>
         <module>spring-application</module>
         <module>java-concurrency-in-practice</module>
+        <module>java-source-code</module>
     </modules>
 
     <parent>
