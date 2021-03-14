@@ -1,7 +1,6 @@
-package com.jwj.concurrency;
+package com.jwj.concurrency.in.practice;
 
 import java.math.BigInteger;
-import java.util.concurrent.ExecutionException;
 
 /**
  * 一个耗时的计算函数

@@ -1,4 +1,4 @@
-package com.jwj.concurrency;
+package com.jwj.concurrency.in.practice;
 
 import java.util.Collections;
 import java.util.HashSet;

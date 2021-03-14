@@ -1,4 +1,4 @@
-package com.jwj.concurrency;
+package com.jwj.concurrency.in.practice;
 
 import java.io.IOException;
 import java.net.ServerSocket;

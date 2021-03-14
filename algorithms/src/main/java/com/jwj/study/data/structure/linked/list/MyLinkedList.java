@@ -1,7 +1,5 @@
 package com.jwj.study.data.structure.linked.list;
 
-import javax.xml.crypto.Data;
-
 /**
  * @author jwj
  * @date 2020/12/30 11:14
