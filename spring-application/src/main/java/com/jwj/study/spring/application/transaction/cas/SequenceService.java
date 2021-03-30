@@ -1,6 +1,7 @@
 package com.jwj.study.spring.application.transaction.cas;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.support.TransactionTemplate;
 
@@ -13,7 +14,7 @@ import java.util.Date;
  * @since 1.0
  */
 @Service
-public class SequenceService {
+public class SequenceService implements BeanPostProcessor {
 
     private static final int INIT_VALUE = 1;
     private static final int INCR_VALUE = 1;

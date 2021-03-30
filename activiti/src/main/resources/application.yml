@@ -1,0 +1,9 @@
+server:
+  port: 8081
+spring:
+#数据库配置
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://39.100.87.64:3306/delta_common?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&autoReconnect=true&failOverReadOnly=false&useSSL=false
+    username: delta
+    password: delta@1013
